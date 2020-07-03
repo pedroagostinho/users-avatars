@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+
+    <% @users.each do |user| %>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+      <div class="card-product" data-aos="zoom-in">
+        <% if user.photo.attached? %>
+          <%= cl_image_tag(user.photo.key) %>
+        <% else %>
+          <img src="<%= Faker::Avatar.image %>"/>
+        <% end %>
+
+        <div class="card-product-infos">
+          <h2><%= user.name.capitalize %></h2>
+          <p><%= mail_to user.email  %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
