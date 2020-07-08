@@ -25,7 +25,7 @@ console.log('Hello World from Webpacker')
 
 // External imports
 import "bootstrap";
-
+import { initChatroomCable } from '../channels/chatroom_channel';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
